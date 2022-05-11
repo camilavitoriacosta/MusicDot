@@ -1,0 +1,47 @@
+*Seção
+            img/logo.svg   Logo da MusicDot
+
+            *Endereço
+                AOVS Sistemas de Informática S.A.
+
+                CNPJ 05.555.382/0001-33
+
+                Rua Vergueiro - São Paulo/SP
+
+                Telefone (11) 4118-3319
+
+
+				*Lista não ordenada de links com imagem
+                    https://www.facebook.com/musicdotonline
+                        img/footer-icone-facebook.svg
+                    https://www.youtube.com/user/musicdotonline
+						img/footer-icone-youtube.svg
+                    https://www.instagram.com/musicdotonline/
+                        img/footer-icone-instagram.svg
+
+
+        *Seção
+             Cursos da MusicDot 
+				*Lista não ordenada de links
+                    Cursos de Teclado & Piano
+                    Cursos de Violão/Guitarra
+                    Cursos de Baixo
+                    Cursos de Bateria
+                    Cursos de Percussão
+                    Cursos de Canto
+                    Cursos de Áudio
+                    Cursos de Teoria
+                    Cursos de Sopro
+                    Cursos de Cordas
+
+		*Seção
+            MusicDot 
+				*Lista não ordenada de links
+                    Apostila
+                    E-book
+                    Login
+                    Matricule-se
+                    Perguntas frequentes
+                    Para Escolas
+                    Contato
+ 
