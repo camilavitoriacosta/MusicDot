@@ -25,17 +25,36 @@
 
 .cabecalho__menu__item a{ 
     padding: 1.86em 1.42em;
+    display: inline-block;
 }
 
 @media(min-width: 640px){
     .cabecalho{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 
     .cabecalho__menu{
         background-color: inherit;
         padding: 0;
+    }
+}
+
+@media(min-width: 770px){
+    .cabecalho__menu__item--matricular{
+        border-radius: 6px;
+        margin-left: 1.42em;
+        background-color: #e93d50;
+    }
+
+    .cabecalho__menu__item--matricular a{
+        padding: 1.8em 3.5em;
+    }
+}
+
+@media (min-width: 1066px){
+    .cabecalho{
+        padding: 0 calc((100% - 960px)/2);
     }
 }
