@@ -1,0 +1,23 @@
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.foto-container{
+    width: 66%;
+}
+
+.foto{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #555454aa;
+    background-color: #e68495;
+    margin-bottom: 1rem;
+}
+
+.foto-destaque-verde{
+    background-color: #82cf86;
+    height: calc(400px + 1rem);
+}
