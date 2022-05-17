@@ -11,12 +11,12 @@ function adicionarCurso(checkbox){
     if (checkbox.checked){
         quantidadeCursos++;
         quantidadeHoras += parseInt(checkbox.value);
-        quantidadePreco -= parseInt(totalPreco.getAttribute("data-preco"));
+        quantidadePreco += parseInt(checkbox.getAttribute("data_preco"));
     }
     else{
         quantidadeCursos--;
         quantidadeHoras -= parseInt(checkbox.value);
-        quantidadePreco -= parseInt(totalPreco.getAttribute("data-preco"));
+        quantidadePreco -= parseInt(checkbox.getAttribute("data_preco"));
     }
     
     totalCurso.textContent = quantidadeCursos + " curso(s)";
@@ -35,14 +35,26 @@ function ativaBotao(){
 }
 
 function checkarTodos(){
+    var todos = document.querySelector(".todos");
+    var selecionar = todos.getAttribute("todos_selecionados");
+    
+    if (selecionar == "false"){
+        todos.setAttribute("todos_selecionados", "true");
+        selecionar = true;
+    }
+    else{
+        todos.setAttribute("todos_selecionados", "false");
+        selecionar= false;
+    }
+
     var checkboxs = document.getElementsByName("curso");
     for(var i=0; i < checkboxs.length; i++){
-        checkboxs[i].checked = true;
-        quantidadeCursos++;
-        quantidadeHoras += parseInt(checkboxs[i].value);
-        quantidadePreco += parseInt(totalPreco.preco);
-        totalCurso.textContent = quantidadeCursos + " curso(s)";
-        totalHoras.textContent = quantidadeHoras + " hora(s)";
-        totalPreco.textContent = "R$ "+ quantidadePreco;
+        checkboxs[i].checked = selecionar;
+        adicionarCurso(checkboxs[i]);
     }
+
+        
+    totalCurso.textContent = quantidadeCursos + " curso(s)";
+    totalHoras.textContent = quantidadeHoras + " hora(s)";
+    totalPreco.textContent = "R$ "+ quantidadePreco;
 }
