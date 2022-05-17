@@ -42,85 +42,46 @@
         <table class="table table-dark table-striped rounded-top mt-2">
             <thead>
                 <tr>
-                    <th scope="col"></th>
+                    <th scope="col"><input onclick="checkarTodos()" type="checkbox" name="todos"></th>
                     <th scope="col">Curso</th>
                     <th scope="col">Tempo</th>
+                    <th scope="col">Preço</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
+                    <td><input onclick="adicionarCurso(this)" type="checkbox" name="curso" value="20" data-preco="20"></td>
                     <td>Curso de Violão</td>
                     <td>20h</td>
+                    <td>R$ 20</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
+                    <td><input onclick="adicionarCurso(this)" type="checkbox" name="curso" value="30" data-preco="30"></td>
                     <td>Curso de Bambolê</td>
                     <td>30h</td>
+                    <td>R$ 30</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
+                    <td><input onclick="adicionarCurso(this)" type="checkbox" name="curso" value="12" data-preco="300"></td>
                     <td>Curso de Java</td>
                     <td>12h</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
-                    <td>Curso de Violão</td>
-                    <td>20h</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
-                    <td>Curso de Bambolê</td>
-                    <td>30h</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
-                    <td>Curso de Java</td>
-                    <td>12h</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
-                    <td>Curso de Violão</td>
-                    <td>20h</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
-                    <td>Curso de Bambolê</td>
-                    <td>30h</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
-                    <td>Curso de Java</td>
-                    <td>12h</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
-                    <td>Curso de Violão</td>
-                    <td>20h</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
-                    <td>Curso de Bambolê</td>
-                    <td>30h</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="curso" value="20"></td>
-                    <td>Curso de Java</td>
-                    <td>12h</td>
+                    <td>R$ 300</td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
                     <td>Total</td>
-                    <td class="java-total-de-cursos"> 0 curso(s)</td>
-                    <td class="java-total-de-horas"> 0h </td>
+                    <td class="js-total-de-cursos"> 0 curso(s)</td>
+                    <td class="js-total-de-horas"> 0h </td>
+                    <td class="js-total-de-preco"> R$ 0 </td>
                 </tr>
             </tfoot>
         </table>
-        <button type="button" class="btn btn-outline-dark btn-lg mb-4"> Confirmar Matrícula </button>
+        <button type="button" class="js-botao-confirmar disabled btn btn-outline-dark btn-lg mb-4"> Confirmar Matrícula </button>
     </main>
     <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/matricula.js"></script>
 </body>
 </html>
