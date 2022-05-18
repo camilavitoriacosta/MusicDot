@@ -11,17 +11,17 @@ function adicionarCurso(checkbox){
     if (checkbox.checked){
         quantidadeCursos++;
         quantidadeHoras += parseInt(checkbox.value);
-        quantidadePreco += parseInt(checkbox.getAttribute("data_preco"));
+        quantidadePreco += parseFloat(checkbox.getAttribute("data_preco"));
     }
     else{
         quantidadeCursos--;
         quantidadeHoras -= parseInt(checkbox.value);
-        quantidadePreco -= parseInt(checkbox.getAttribute("data_preco"));
+        quantidadePreco -= parseFloat(checkbox.getAttribute("data_preco"));
     }
     
     totalCurso.textContent = quantidadeCursos + " curso(s)";
     totalHoras.textContent = quantidadeHoras + " hora(s)";
-    totalPreco.textContent = "R$ "+ quantidadePreco;
+    totalPreco.textContent = quantidadePreco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     ativaBotao();
 }
 
@@ -36,8 +36,11 @@ function ativaBotao(){
 
 function checkarTodos(todos){
     var checkboxs = document.getElementsByName("curso");
+
     for(var i=0; i < checkboxs.length; i++){
-        checkboxs[i].checked = todos.checked;
-        adicionarCurso(checkboxs[i]);
+        if (checkboxs[i].checked != todos.checked){
+            checkboxs[i].checked = todos.checked;
+            adicionarCurso(checkboxs[i]);
+        }
     }
 }
