@@ -34,27 +34,10 @@ function ativaBotao(){
     }
 }
 
-function checkarTodos(){
-    var todos = document.querySelector(".todos");
-    var selecionar = todos.getAttribute("todos_selecionados");
-    
-    if (selecionar == "false"){
-        todos.setAttribute("todos_selecionados", "true");
-        selecionar = true;
-    }
-    else{
-        todos.setAttribute("todos_selecionados", "false");
-        selecionar= false;
-    }
-
+function checkarTodos(todos){
     var checkboxs = document.getElementsByName("curso");
     for(var i=0; i < checkboxs.length; i++){
-        checkboxs[i].checked = selecionar;
+        checkboxs[i].checked = todos.checked;
         adicionarCurso(checkboxs[i]);
     }
-
-        
-    totalCurso.textContent = quantidadeCursos + " curso(s)";
-    totalHoras.textContent = quantidadeHoras + " hora(s)";
-    totalPreco.textContent = "R$ "+ quantidadePreco;
 }
